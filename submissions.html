@@ -2,7 +2,7 @@
 <html>
 <?php 
 if(isset($_POST['password'])) {
-    if ($_POST['password'] == 'letmein'){
+    if ($_POST['password'] == 'enter'){
         echo "Correct";
         exit;
 
@@ -20,49 +20,54 @@ if(isset($_POST['password'])) {
 
 
 <head>
+        <style>
+        .dropbtn {
+    background-color: #3a76d8;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #4a99d9}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #4a99d9;
+}
+</style>
 	<title> THIS IS THE VR THATS REALLY MADE IN JAVASCIPT</title>
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     </head>
     <body style="background-color: #ccffff;">
-        <style>
-        .dropbtn {
-            background-color: #4CAF50;
-            color:white;
-            padding: 20px;
-            font-size: 15px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .dropdown {
-            position: center;
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            position: center;
-            right: 0;
-            background-color: #f9f9f9;
-            box-shadow: 0px, 8px, 16px, 0px rbga(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a{
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover{background-color: #f1f1f1}
-        .dropdown:hover .dropdown-content { 
-            display: block;
-        }
-        .dropdown:hover .dropbtn {
-            background-color: #3e8e41;
-        }
-            </style>
+        
             <div class="dropdown" style="float:left;">
     <button class="dropbtn">HUB</button>
     <div class="dropdown-content" style="left:0;">
@@ -83,12 +88,12 @@ if(isset($_POST['password'])) {
     <br/>
     <br/>
     <br/>
+
 
 
 
 
-
-        <form action="login.php" method="POST"> 
+        <form action="index5.html" method="POST"> 
             Please enter the password to see logs.
             <br/>
             <input type="password" name="password"/>
@@ -104,6 +109,3 @@ if(isset($_POST['password'])) {
     	<p style="font-size: 120%; color: red;">   You need special permission to obtain the password. Loggin in to this domain will give you full access to the log files of submissions.</p>
     </body>
     </html>
-    
- 
-
